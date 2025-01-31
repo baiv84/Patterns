@@ -47,6 +47,7 @@ final public class Strategy {
     private static final Fighter[] fighters = new Fighter[] { new Boxer(), new Karateka(), new Wrestler() };
 
     public static void demonstrate() {
+        System.out.println("\n***********************\nПАТТЕРН - СТРАТЕГИЯ\n***********************\n");
         Arrays.stream(fighters).forEach(fight -> {
             fight.begin();
             fight.doFight();
