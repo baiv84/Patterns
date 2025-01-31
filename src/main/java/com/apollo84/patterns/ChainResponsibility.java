@@ -1,5 +1,7 @@
 package com.apollo84.patterns;
 
+import lombok.Getter;
+
 class Note {
     public static final int R100 = 100;
     public static final int R500 = 500;
@@ -7,6 +9,7 @@ class Note {
     public static final int R5000 = 5000;
 }
 
+@Getter
 class Money {
     private Integer amount;
     public Money(Integer amount) { setAmount(amount); }
@@ -16,7 +19,6 @@ class Money {
         else { throw new RuntimeException("Сумма должна быть МЕНЕЕ 200_000 рублей и КРАТНО 100 рублей"); }
     }
 
-    public Integer getAmount() { return amount; }
 }
 
 abstract class NoteModule {
