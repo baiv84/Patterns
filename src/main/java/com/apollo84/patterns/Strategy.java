@@ -44,7 +44,7 @@ class Wrestler extends Fighter {
 }
 
 final public class Strategy {
-    private static Fighter[] fighters = new Fighter[] { new Boxer(), new Karateka(), new Wrestler() };
+    private static final Fighter[] fighters = new Fighter[] { new Boxer(), new Karateka(), new Wrestler() };
 
     public static void demonstrate() {
         Arrays.stream(fighters).forEach(fight -> {
