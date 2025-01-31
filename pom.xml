@@ -29,7 +29,7 @@
                             <transformers>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.apollo84.patterns.MainApp</mainClass>
+                                    <mainClass>com.apollo84.MainApp</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
