@@ -2,7 +2,6 @@ package com.apollo84;
 
 import java.util.List;
 import java.util.Arrays;
-
 import com.apollo84.patterns.*;
 
 public class MainApp {

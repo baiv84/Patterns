@@ -64,7 +64,7 @@ class Director {
     }
 }
 
-public final class Builder implements Demonstator {
+final public class Builder implements Demonstator {
     @Override
     public void demonstrate() {
         System.out.println("\n***********************\nПАТТЕРН - СТРОИТЕЛЬ\n***********************\n");
