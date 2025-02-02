@@ -64,8 +64,9 @@ class Director {
     }
 }
 
-public final class Builder {
-    public static void demonstrate() {
+public final class Builder implements Demonstator {
+    @Override
+    public void demonstrate() {
         System.out.println("\n***********************\nПАТТЕРН - СТРОИТЕЛЬ\n***********************\n");
         Director director = new Director(new RifledWeaponBuilder());
         Weapon weapon1 = director.buildWeapon();

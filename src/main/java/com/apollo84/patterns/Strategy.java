@@ -43,10 +43,11 @@ class Wrestler extends Fighter {
     public Wrestler() { this.strategy = new WrestlingAttackStrategy(); }
 }
 
-final public class Strategy {
-    private static final Fighter[] fighters = new Fighter[] { new Boxer(), new Karateka(), new Wrestler() };
+final public class Strategy implements Demonstator {
+    private final Fighter[] fighters = new Fighter[] { new Boxer(), new Karateka(), new Wrestler() };
 
-    public static void demonstrate() {
+    @Override
+    public void demonstrate() {
         System.out.println("\n***********************\nПАТТЕРН - СТРАТЕГИЯ\n***********************\n");
         Arrays.stream(fighters).forEach(fight -> {
             fight.begin();

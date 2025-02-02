@@ -36,18 +36,28 @@ abstract class NoteModule {
     public void setNextModule(NoteModule module) { next = module;}
 }
 
-class Note5000Module extends NoteModule { Note5000Module() { noteNominal = Note.R5000;} }
-class Note1000Module extends NoteModule { Note1000Module() { noteNominal = Note.R1000; } }
-class Note500Module extends NoteModule { Note500Module() { noteNominal = Note.R500;} }
-class Note100Module extends NoteModule { Note100Module() { noteNominal = Note.R100; } }
+class Note5000Module extends NoteModule {
+    Note5000Module() { noteNominal = Note.R5000; }
+}
+class Note1000Module extends NoteModule {
+    Note1000Module() { noteNominal = Note.R1000; }
+}
+class Note500Module extends NoteModule {
+    Note500Module() { noteNominal = Note.R500; }
+}
+class Note100Module extends NoteModule {
+    Note100Module() { noteNominal = Note.R100; }
+}
 
-public final class ChainResponsibility {
-    private static final NoteModule note5000 = new Note5000Module();
-    private static final NoteModule note1000 = new Note1000Module();
-    private static final NoteModule note500 = new Note500Module();
-    private static final NoteModule note100 = new Note100Module();
 
-    public static void demonstrate() {
+final public class ChainResponsibility implements Demonstator {
+    private final NoteModule note5000 = new Note5000Module();
+    private final NoteModule note1000 = new Note1000Module();
+    private final NoteModule note500 = new Note500Module();
+    private final NoteModule note100 = new Note100Module();
+
+    @Override
+    public void demonstrate() {
         System.out.println("\n***********************\nПАТТЕРН - ЦЕПОЧКА ОТВЕТСТВЕННОСТИ\n***********************\n");
         note5000.setNextModule(note1000);
         note1000.setNextModule(note500);
