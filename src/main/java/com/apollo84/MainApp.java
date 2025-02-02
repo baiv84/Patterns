@@ -1,13 +1,16 @@
 package com.apollo84;
 
-import com.apollo84.patterns.Builder;
-import com.apollo84.patterns.ChainResponsibility;
-import com.apollo84.patterns.Strategy;
+import java.util.List;
+import java.util.Arrays;
+import com.apollo84.patterns.*;
 
 public class MainApp {
     public static void main(String[] args) {
-        Strategy.demonstrate();
-        ChainResponsibility.demonstrate();
-        Builder.demonstrate();
+        List<Demonstator> patterns = Arrays.asList(new Strategy(),
+                                                   new ChainResponsibility(),
+                                                   new Builder(),
+                                                   new Proxy()
+        );
+        patterns.forEach(Demonstator::demonstrate);
     }
 }
