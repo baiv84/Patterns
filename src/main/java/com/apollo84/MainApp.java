@@ -9,7 +9,8 @@ public class MainApp {
         List<Demonstator> patterns = Arrays.asList(new Strategy(),
                                                    new ChainResponsibility(),
                                                    new Builder(),
-                                                   new Proxy()
+                                                   new Proxy(),
+                                                   new Decorator()
         );
         patterns.forEach(Demonstator::demonstrate);
     }
