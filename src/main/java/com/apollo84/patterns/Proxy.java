@@ -41,7 +41,7 @@ final public class Proxy implements Demonstator{
     @Override
     public void demonstrate() {
         System.out.println("\n***********************\nПАТТЕРН - ПРОКСИ\n***********************\n");
-        ProxyDish dish = new ProxyDish("Мясо по-французски");
+        Order dish = new ProxyDish("Мясо по-французски");
         dish.orderDish();
     }
 }
